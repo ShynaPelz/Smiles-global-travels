@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smiles Global Travels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.11.3/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Overlay -->
+    <div id="sidebar-overlay" class="fixed inset-0 z-30 hidden" onclick="closeSidebar()"></div>
+    
+    <!-- Left Sidebar -->
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-60 bg-black z-50 transform -translate-x-full transition-transform duration-300 shadow-xl">
+        <div class="flex items-center justify-end px-6 py-5">
+            <button onclick="closeSidebar()" class="text-white text-2xl font-bold">&times;</button>
+        </div>
+        <ul class="flex flex-col px-6 space-y-5">
+            <li><a href="#home" class="text-white font-bold text-sm lg:text-lg tracking-wide transition">HOME</a></li>
+            <li><a href="#destination" class="text-white font-bold text-sm lg:text-lg tracking-wide transition">DESTINATIONS</a></li>
+            <li><a href="#tour" class="text-white font-bold text-sm lg:text-lg tracking-wide transition">TOURS</a></li>
+            <li><a href="#about" class="text-white font-bold text-sm lg:text-lg tracking-wide transition">ABOUT US</a></li>
+            <li><a href="#blog" class="text-white font-bold text-sm lg:text-lg tracking-wide transition">BLOG</a></li>
+            <li><a href="#enquire" class="text-white font-bold text-sm lg:text-lg tracking-wide transition">ENQUIRE</a></li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <div class="fixed z-40 w-full">
+        <nav id="navbar" class="flex justify-between items-center px-5 md:px-10 lg:px-16 py-5 w-full transition-all duration-300">
+            <div>
+                <a href="" class="">
+                    <img src="img/Logo2.webp" alt="Logo" class="w-36 lg:w-48">
+                </a>
+            </div>
+            
+            <div class="flex space-x-10 hidden xl:block">
+                <a href="#home" class="nav-link text-white text-sm font-bold">
+                    HOME
+                </a>
+                <a href="#destination" class="nav-link text-white text-sm font-bold">
+                    DESTINATIONS
+                </a>
+                <a href="#tour" class="nav-link text-white text-sm font-bold">
+                    TOURS
+                </a>
+                <a href="#about" class="nav-link text-white text-sm font-bold">
+                    ABOUT US
+                </a>
+                <a href="#blog" class="nav-link text-white text-sm font-bold">
+                    BLOG
+                </a>
+                <a href="#enquire" class="nav-link text-white text-sm font-bold">
+                    ENQUIRE
+                </a>    
+            </div>
+
+            <a href="#contact" class="hidden lg:block">
+                <button id="nav-btn" class="rounded-3xl bg-[#0F2355] py-3 px-9 text-white hover:bg-[#FA8E0B] hover:border-none
+                transition-all duration-300">
+                    Contact Us
+                </button>
+            </a>
+
+            <a href="#contact" class="flex  items-center space-x-3 lg:hidden">
+                <button id="nav-btn #contact" class="rounded-3xl bg-[#0F2355] py-2 px-4 text-white lg:hidden 
+                hover:bg-[#FA8E0B] hover:border-none transition-all duration-300">
+                    Contact Us
+                </button>
+            </a>
+
+            <!-- Hamburger (mobile only) -->
+            <button id="hamburger-btn" onclick="openSidebar()" class="xl:hidden flex flex-col gap-1.5 p-2 text-end">
+                <span class="ham-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="ham-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+                <span class="ham-line block w-6 h-0.5 bg-white transition-all duration-300"></span>
+            </button>
+        </nav>
+    </div>
+
+
+    <!--Hero-section Bg-img-Swiper -->
+    <section id="home" class="swiper mySwiper w-full h-[750px] md:h-[850px] lg:h-[1200px] xl:h-[600px]">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide bg-cover bg-center"
+            style="background-image: url('https://smilesglobaltravels.com/wp-content/uploads/2025/02/pexels-rdne-5778458-scaled.webp');">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <div data-aos="zoom-in">
+                        <h1 class="text-[#F97316] text-lg lg:text-xl mb-4">
+                            Your Journey to the World and Beyond
+                        </h1>
+                    </div>
+                    <div data-aos="zoom-in">
+                        <h1 class="text-3xl md:text-5xl lg:text-6xl text-center text-white mt-5 leading-24" style="font-family: 'Playfair Display', serif;">
+                            Unveil the 
+                            <span class="italic">Wonders of the <br> World</span> 
+                            with Our <br> Passionate Team
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide bg-cover bg-center"
+                style="background-image: url('https://smilesglobaltravels.com/wp-content/uploads/2025/02/pexels-vika-glitter-392079-26077110-scaled.webp');">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <h1 class="text-[#F97316] text-lg lg:text-xl mb-4">
+                        Your Journey to the World and Beyond
+                    </h1>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl text-center  text-white mt-5 leading-24" style="font-family: 'Playfair Display', serif;">
+                        Unveil the 
+                        <span class="italic">Wonders of the <br> World</span> 
+                        with Our <br> Passionate Team
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide bg-cover bg-center"
+                style="background-image: url('img/pexels-saturnus99-11257767-scaled.webp');">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <h1 class="text-[#F97316] text-lg lg:text-xl mb-4">
+                        Your Journey to the World and Beyond
+                    </h1>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl text-center text-white mt-5 leading-24" style="font-family: 'Playfair Display', serif;">
+                        Unveil the 
+                        <span class="italic">Wonders of the <br> World</span> 
+                        with Our <br> Passionate Team
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide bg-cover bg-center"
+                style="background-image: url('img/pexels-maxchen2k-18090305-scaled.webp');">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <h1 class="text-[#F97316] text-lg lg:text-xl mb-4">
+                        Your Journey to the World and Beyond
+                    </h1>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl text-center text-white mt-5 leading-24" style="font-family: 'Playfair Display', serif;">
+                        Unveil the 
+                        <span class="italic">Wonders of the <br> World</span> 
+                        with Our <br> Passionate Team
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide bg-cover bg-center"
+                style="background-image: url('img/pexels-nui-malama-169330637-29506498-scaled.webp');">
+                <div class="w-full h-full flex flex-col items-center justify-center">
+                    <h1 class="text-[#F97316] text-lg lg:text-xl mb-4">
+                        Your Journey to the World and Beyond
+                    </h1>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl text-center text-white mt-5 leading-24" style="font-family: 'Playfair Display', serif;">
+                        Unveil the 
+                        <span class="italic">Wonders of the <br> World</span> 
+                        with Our <br> Passionate Team
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour experience -->
+    <section class="bg-[#0f2355] pb-32">
+        <div data-aos="fade-up">
+            <h1 class="text-white font-bold text-center lg:text-lg pt-28">
+                WHAT MAKES US DIFFERENT
+            </h1>
+        </div>
+        <div data-aos="fade-up">
+            <h1 class="text-white text-center text-3xl lg:text-5xl font-bold pt-10">
+                Why Book with Us
+            </h1>
+        </div>
+        <hr class="text-white block md:hidden lg:hidden mt-7">
+        <div class="grid md:grid-cols-3 px-5 md:px-10 lg:px-16 pt-16 pb-20 lg:pt-24 gap-20">
+            <div data-aos="fade-up" data-aos-delay="200"  class="">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/05/noun-maps-1724386-2.png" alt="img" class="w-12 mx-auto">
+                <h1 class="text-center pt-5 text-white text-lg font-bold">
+                    Unforgettable <br> experiences
+                </h1>
+                <p class="text-center text-white pt-8">
+                    Crafting personalized <br class="md:hidden"> itineraries that cater to your <br class="md:hidden"> unique preferences.
+                </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" >
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/05/noun-world-1715803-1.png" alt="img" class="w-12 mx-auto">
+                <h1 class="text-center pt-5 text-white text-lg font-bold">
+                    Global Travel <br> Agency
+                </h1>
+                <p class="text-center text-white pt-5">
+                    Benefit from the expertise <br class="md:hidden"> of travel professionals who <br class="md:hidden"> have knowledge about <br> destinations
+                </p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" >
+                <img src=" https://smilesglobaltravels.com/wp-content/uploads/2024/05/noun-price-3606198-1.png" alt="img" class="w-12 mx-auto">
+                <h1 class="text-center pt-5 text-white text-lg font-bold">
+                    Value For Money
+                </h1>
+                <p class="text-center text-white pt-8">
+                    Access exclusive deals, <br> discounts and perks that <br> maximixing the value of <br> your budget
+                </p>
+            </div>
+        </div>
+
+        <div id="tour" class="grid lg:grid-cols-2 px-5 md:px-10 lg:px-16 items-center gap-20">
+            <div data-aos="zoom-in">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/06/Picture2.jpg" alt="img" class="md:mx-auto">
+            </div>
+            <div data-aos="fade-right" class="text-white text-md lg:text-lg font-bold">
+                <p>
+                    Embark on a cruise along the legendary Loch Ness, keeping an <br class="hidden lg:hidden xl:block"> eye out for
+                    the elusive Loch Ness Monster. Visit the iconic <br class="hidden lg:hidden xl:block"> Urquhart Castle, 
+                    perched on the shores of the loch, and <br class="hidden lg:hidden xl:block"> uncover its turbulent history
+                    and breathtaking views.
+                </p>
+                <p class="pt-7">
+                    Journey west to the Isle of Skye, renowned for its dramatic <br class="hidden lg:hidden xl:block"> landscapes,
+                    rugged coastline, and medieval castles. Explore <br class="hidden lg:hidden xl:block"> the otherworldly rock 
+                    formations of the Quiraing and the <br class="hidden lg:hidden xl:block"> stunning Fairy Pools, and visit the 
+                    historic Dunvegan Castle, <br class="hidden lg:hidden xl:block"> home to the Clan MacLeod for over 800 years. 
+                    Enjoy a <br class="hidden lg:hidden xl:block"> traditional Scottish dinner featuring local specialties.
+                </p>
+                <p class="pt-7">
+                    Arrive back in Edinburgh in the evening, where you can reflect <br class="hidden lg:hidden xl:block"> on your
+                    Highland adventure over a farewell dinner.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book your tour -->
+    <section class="grid md:grid-cols-2 px-5 md:px-10 lg:px-16 pt-12 lg:py-28 items-center gap-10">
+        <div data-aos="fade-right">
+            <h1 class="text-center text-4xl lg:text-5xl">
+                Book Your Tour
+            </h1>
+            <p class="flex justify-center text-center text-md lg:text-lg md:text-start text-[#7A7A7A] pt-11">
+                Browse some of our trips and get in <br> contact to start planning your very own <br> adventure.
+            </p>
+        </div>
+        <div data-aos="zoom-in">
+            <img src="img/hungary_tour_Image.jpg" alt="img">
+        </div>
+    </section>
+
+    <section id="about" class="bg-gray-100 py-16 px-3 md:px-10 lg:px-0">
+        <div class="owl-carousel owl-theme px-4">
+            <!-- Testimonial 1 -->
+            <div class="bg-white px-2 py-5 md:py-8 md:px-2 rounded-lg Testimonial-shadow text-center max-w-lg mx-auto">
+                <h3 class="text-black md:text-2xl text-xl font-semibold md:pb-5 pb-3">
+                    "Best Customer Service"
+                </h3>
+                <p class="text-black px-3 text-base md:text-lg space pb-7">
+                    Planning a surprise anniversary trip for my parents was daunting until I contacted this travel agency. 
+                    They took care of all the details, crafting a romantic getaway to paris that will never forget. The
+                    thoughtful toches, like a private Seine River cruiser and a dinner reservation at a Michelin-starred
+                    restaurant, made it extra special.
+                </p>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="bg-white px-2 py-5 md:py-8 md:px-2 rounded-lg Testimonial-shadow text-center max-w-lg mx-auto">
+                <h3 class="text-black md:text-2xl text-xl font-semibold md:pb-5 pb-3">
+                    "A Dream Come True!"
+                </h3>
+                <p class="text-black px-3 text-base md:text-lg space">
+                    Our travel agent truly understood our needs and went above and beyond to create a personalized itinerary
+                    that exceeded all expectations. From booking exclusive reservations to organizing private tours, every
+                    detail was handled with care and professionalism. Their dedication ensured our trip was not only smooth
+                    but also deeply memorable.  
+                </p>
+            </div>
+    
+            <!-- Testimonial 3 -->
+            <div class="bg-white  px-2 py-5 md:py-8 md:px-2 rounded-lg Testimonial-shadow text-center max-w-lg mx-auto">
+                <h3 class="text-black md:text-2xl text-xl font-semibold md:pb-5 pb-3">
+                    "Tailored Perfection!"
+                </h3>
+                <p class="text-black px-3 text-base md:text-lg pb-6 space">
+                    Choosing this travel agency for our vacation was one of the best decisions we've made. From beginning
+                    to end, they handled every detail with care, making our trip completely stress-free and truly
+                    unforgettable. Their expertise led us to discover amazing destinations we never would have found
+                    on our own.
+                </p>
+            </div>
+        </div>    
+    </section>
+
+
+    <!-- Explore -->
+    <section class="bg-cover h-[700px] flex items-center justify-center" style="background-image : url('img/range-buildings-shore-reflecting-lake-clear-blue-sky.jpg');">
+        <div class=" text-center">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h1 class="text-white [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)] font-bold text-xl">
+                    I WANT TO EXPLORE
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h1 class="text-white [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)] font-bold text-5xl mt-6">
+                    Norway
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+            <button class="text-white bg-black px-10 py-4 mt-7 hover:bg-[#0f2355] rounded-full transition-all duration-500">
+                Discover more
+            </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arrow -->
+    <section class="flex lg:justify-end justify-end px-[70px] md:px-[300px] lg:px-[500px]">
+        <img src="img/noun-arrow-2989501-6.png" alt="arrow" class="w-16 md:w-20 mt-5">
+    </section>
+
+    <!-- Travel Inspiration -->
+    <section class="px-5 md:px-5 lg:px-5 xl:px-16 pt-4">
+        <div data-aos="fade-up">
+            <h1 class="text-center text-xl  lg:text-2xl font-bold">
+                Travel in style
+            </h1>
+            <h2 class="text-center text-2xl lg:text-4xl font-bold pt-5 pb-8">
+                Find travel inspiration <br> by style
+            </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10 xl:px-12">
+            <div data-aos="fade-up" data-aos-delay="200" class="bg-cover bg-center pl-4 flex items-end pb-6 h-96 rounded-xl shadow-2xl" 
+            style="background-image: url('https://smilesglobaltravels.com/wp-content/uploads/2025/02/pexels-kampus-6182086-1024x684.jpg');">
+                <h1 class="text-white [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)] font-bold text-2xl">
+                    Family Travel
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="bg-cover bg-center pl-4 flex items-end pb-6 h-96 rounded-xl shadow-2xl" 
+            style="background-image: url('https://smilesglobaltravels.com/wp-content/uploads/2025/02/pexels-rdne-8052844-1024x683.jpg');">
+                <h1 class="text-white [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)] font-bold text-2xl">
+                    Private Travel
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="bg-cover bg-center pl-4 flex items-end pb-6 h-96 rounded-xl shadow-2xl" 
+            style="background-image: url(' https://smilesglobaltravels.com/wp-content/uploads/2025/02/pexels-cottonbro-6670584-1024x683.jpg');">
+                <h1 class="text-white [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)] font-bold text-2xl">
+                    Honeymoons
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="destination" class="px-5 md:px-5 lg:px-5 xl:px-16 pt-24">
+        <div data-aos="fade-up">
+        <h1 class="text-center text-lg  lg:text-xl font-bold">
+            Discover the World with Us
+        </h1>
+        </div>
+        <div data-aos="fade-up">
+        <h2 class="text-center text-4xl lg:text-5xl font-bold pt-5 pb-10 lg:pb-20">
+            Inspiring stories
+        </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:px-12 gap-10">
+            <div data-aos="fade-up" data-aos-delay="200" class="">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/06/Picture1-1-768x1024.jpg" alt="img" 
+                class="h-[455px] xl:h-[505px] rounded-xl">
+                <h1 class="font-['EB_Garamond'] text-[#1a1208] text-2xl lg:text-3xl pt-5">
+                    Traveling Ideas In Africa
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="lg:mt-12">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/06/Picture1-768x1152.jpg" alt="img" 
+                class="h-[455px] xl:h-[505px]  w-full rounded-xl">
+                <h1 class="font-['EB_Garamond'] text-[#1a1208] text-2xl lg:text-3xl pt-5">
+                    Top 10 Tourist Attractions In Paris
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/06/Brazil_01-768x1152.jpg" alt="img"
+                 class="h-[400px] xl:h-[505px]  w-full rounded-xl">
+                <h1 class="font-['EB_Garamond'] text-[#1a1208] text-2xl lg:text-3xl pt-5">
+                    Best Places To Vist In Brazil
+                </h1>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-12 xl:px-12 gap-10">
+            <div data-aos="fade-up" data-aos-delay="200" class="">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/05/young-blonde-photographer-takes-pictures-of-passo-2023-11-27-05-04-48-utc-768x512.jpg" alt="img" 
+                class="h-[400px] xl:h-[505px]  rounded-xl object-cover object-[80%_50%]">
+                <h1 class="font-['EB_Garamond'] text-[#1a1208] text-xl lg:text-3xl pt-5">
+                    Where To Dive In To The Hottest - Or Coldest! - New Wellnes Trend
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="400" class="lg:mt-12">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/04/sunset-at-tre-cime-di-lavaredo-mountains-2023-11-27-05-33-47-utc-768x968.jpg" alt="img" 
+                class="h-[400px] xl:h-[505px]  w-full rounded-xl">
+                <h1 class="font-['EB_Garamond'] text-[#1a1208] text-xl lg:text-3xl pt-5">
+                    Essential Tips For Booking Your Next All-Inclusive Vacation
+                </h1>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="600" class="">
+                <img src="https://smilesglobaltravels.com/wp-content/uploads/2024/05/tribeca-alley-in-new-york-2023-11-27-05-36-08-utc-768x513.jpg" alt="img"
+                 class="h-[400px] xl:h-[505px] w-full rounded-xl object-cover">
+                <h1 class="font-['EB_Garamond'] text-[#1a1208] text-xl lg:text-3xl pt-5">
+                    It's Always Peak Season For Exploring Europe
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-cover bg-center flex items-end justify-center pb-3 mt-20 lg:mt-28
+    text-lg lg:text-xl text-white [text-shadow:2px_2px_8px_rgba(0,0,0,0.8)] font-bold h-[500px] lg:h-[750px]" 
+    style="background-image: url('img/pexels-august-de-richelieu-7432339-scaled.webp')">
+        <div data-aos="zoom-in">
+            Discover Your Next Adventure
+        </div>
+    </section>
+
+    <section id="enquire" class="px- md:px-10 lg:px-16">
+        <div data-aos="fade-up">
+            <h1 class="text-center text-2xl lg:text-6xl font-semibold font-['EB_Garamond'] mt-10">
+                Contact a Travel Expert
+            </h1>
+        </div>
+        <form data-aos="fade-right" class="flex flex-col items-center px-4 py-8 space-y-7 w-full">
+            <div class="w-full max-w-3xl mt-3">
+                <label class="block lg:text-lg font-bold text-slate-700 mb-1">
+                    Your Name<span class="text-red-500 text-sm">*</span>
+                </label>
+                <input type="text" class="w-full px-4 py-3 rounded-full border border-slate-300 bg-white 
+                focus:outline-none focus:ring-2 focus:ring-slate-400" required>
+            </div>
+            <div class="w-full max-w-3xl">
+                <label class="block lg:text-lg font-bold text-slate-700 mb-1">
+                    Email Address<span class="text-red-500 text-sm">*</span>
+                </label>
+                <input type="email" class="w-full px-4 py-3 rounded-full border border-slate-300 bg-white
+                 focus:outline-none focus:ring-2 focus:ring-slate-400" required>
+            </div>
+            <div class="w-full max-w-3xl">
+                <label class="block lg:text-lg font-bold text-slate-700 mb-1">
+                    Destination<span class="text-red-500 text-sm">*</span>
+                </label>
+                <input type="text" class="w-full px-4 py-3 rounded-full border border-slate-300 bg-white 
+                focus:outline-none focus:ring-2 focus:ring-slate-400" required>
+            </div>
+            <div class="w-full max-w-3xl">
+                <label class="block lg:text-lg font-bold text-slate-700 mb-1">
+                    State Date<span class="text-red-500 text-sm">*</span>
+                </label>
+                <input type="date" class="w-full px-4 py-3 rounded-full border border-slate-300 bg-white
+                focus:outline-none focus:ring-2 focus:ring-slate-400 cursor-pointer" required>
+            </div>
+            <div class="w-full max-w-3xl">
+                <label class="block lg:text-lg font-bold text-slate-700 mb-1">
+                    End Date<span class="text-red-500 text-sm">*</span>
+                </label>
+                <input type="date" class="w-full px-4 py-3 rounded-full border border-slate-300 bg-white 
+                focus:outline-none focus:ring-2 focus:ring-slate-400 cursor-pointer" required>
+            </div>
+            <div class="w-full max-w-3xl">
+                <label class="block lg:text-lg font-semibold text-slate-700 mb-1">
+                    Let us know about your trip plans! (optional)
+                </label>
+                <textarea rows="4" class="w-full px-4 py-3 rounded-2xl border border-slate-300 bg-white 
+                focus:outline-none focus:ring-2 focus:ring-slate-400 resize-none" required></textarea>
+            </div>
+            <div class="w-full max-w-3xl">
+                <button class="px-8 py-3 bg-black text-white font-bold rounded-full hover:bg-slate-800 
+                active:scale-95 transition-all">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- footer -->
+    <footer id="blog" data-aos="fade-up" class="bg-[#0F2355] text-white px-5 md:px-12 py-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-14 px-5 md:px-10 lg:px-16">
+            <div>
+                <h3 class="text-orange-500 font-semibold mb-4">
+                    Destinations
+                </h3>
+                <ul class="space-y-2 text-lg">
+                    <li><a href="#" class="hover:text-orange-400 transition-colors">Asia</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition-colors">Africa</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition-colors">Australia</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition-colors">Europe</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition-colors">North America</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition-colors">Latin America</a></li>
+                </ul>
+            </div>
+
+            <div id="contact" class="space-y-6">
+                <div>
+                    <h3 class="text-orange-500 font-semibold mb-3">
+                        Whatsapp/Call Us
+                    </h3>
+                    <p class="text-lg">
+                        +2348113558336
+                    </p>
+                    <p class="text-lg mt-1">
+                        +2347073466701
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-orange-500 font-semibold mb-3">
+                        Email Us
+                    </h3>
+                    <p class="text-lg">
+                        adeshinaogbelade@gmail.com
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-orange-500 font-semibold mb-3">
+                        OFFICE
+                    </h3>
+                    <p class="text-lg leading-relaxed">
+                        17 Ralph Shodeinde Street, Central<br/>
+                        Business District, Abuja.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col space-y-10 lg:space-y-20">
+                <div class="w-60">
+                    <img src="img/Logo2.webp" alt="logo">
+                </div>
+
+                <div class="flex items-center justify-center gap-6 mt-8">
+                    <a href="" class="">
+                        <i class="bi bi-facebook text-2xl"></i>
+                    </a>
+                    <a href="" class="">
+                        <i class="bi bi-twitter-x text-2xl"></i>
+                    </a>
+                    <a href="" class="">
+                        <i class="bi bi-instagram text-2xl"></i>
+                    </a>
+                    <a href="" class="">
+                        <i class="bi bi-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-600 pt-10 mt-12">
+            <div class="flex flex-col items-center text-center gap-2">
+                <p class="text-gray-400 text-sm">
+                    ©2023 Smiles Global Travels & Recruitment Agency. All Rights Reserved.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white">
+                        Terms
+                    </a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white">
+                        Cookie Policy
+                    </a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white">
+                        Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll-Up buttton -->
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-2 lg:bottom-4 right-4 bg-[#FA8E0B] 
+    text-white w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-[#e07d00] 
+    transition-colors duration-200 z-50">
+        <i class="bi bi-arrow-up text-sm"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 32,
+        dots: false,
+        center: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        smartSpeed: 600,
+        touchDrag: true,
+        mouseDrag: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 1
+          },
+          1024: {
+            items: 2
+          }
+        }
+    });
+    });
+    </script>
+
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+        effect: 'fade',          // ⬅️ fade instead of slide
+        fadeEffect: {
+            crossFade: true      // ⬅️ smooth crossfade between images
+        },
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, 
+        once: true,
+        disableMutationObserver: false,   
+      });
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
