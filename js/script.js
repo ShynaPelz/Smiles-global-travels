@@ -1,3 +1,4 @@
+//navbar
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const navBtn = document.getElementById('nav-btn');
@@ -43,6 +44,7 @@ window.addEventListener('scroll', function () {
     }
 }); 
 
+//Menu
 function openSidebar() {
 document.getElementById('sidebar').classList.remove('-translate-x-full');
 document.getElementById('sidebar').classList.add('translate-x-0');

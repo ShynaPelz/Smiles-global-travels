@@ -8,3 +8,12 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+.swiper {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.swiper-initialized {
+  opacity: 1;
+}
